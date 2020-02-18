@@ -25,7 +25,7 @@ struct RawMapPin: Codable {
     var name: String?
     var latitude: Double
     var longitude: Double
-    var imagePath: URL?
+    var imageFileName: String?
     
     init(latitude: Double, longitude: Double) {
         id = RawPinMapCache().nextId

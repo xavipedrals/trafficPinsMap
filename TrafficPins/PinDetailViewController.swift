@@ -18,22 +18,45 @@ class PinDetailViewController: UIViewController {
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var notesTextView: UITextView!
     @IBOutlet weak var pickerView: UIPickerView!
+    @IBOutlet weak var changeImageButton: CustomButton!
+    @IBOutlet weak var selectedImageLabel: UILabel!
     
     var pin: RawMapPin!
     let cache = RawPinMapCache()
     var delegate: PinDetailDelegate?
+    var imageNames: [String] {
+        let images = try? CustomFileManager().listImageFiles()
+        return images ?? []
+    }
+    var isChangeImageMode = false
     
     //MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         titleTextField.text = pin.name ?? ""
+        selectedImageLabel.text = pin.imageFileName ?? "No selected image"
+        guard let imageFile = pin.imageFileName else { return }
+        imageView.image = CustomFileManager().loadImageFromDiskWith(fileName: imageFile)
     }
     
     //MARK: - Actions
     
     @IBAction func changeImagePressed(_ sender: Any) {
-        pickerView.isHidden = false
+        titleTextField.resignFirstResponder()
+        if isChangeImageMode {
+            pickerView.isHidden = true
+            changeImageButton.setTitle("Change image", for: .normal)
+            let selectedImageIndex = pickerView.selectedRow(inComponent: 0)
+            let fileName = imageNames[selectedImageIndex]
+            selectedImageLabel.text = fileName
+            imageView.image = CustomFileManager().loadImageFromDiskWith(fileName: fileName)
+            pin.imageFileName = fileName
+        } else {
+            pickerView.isHidden = false
+            changeImageButton.setTitle("Save image", for: .normal)
+        }
+        isChangeImageMode = !isChangeImageMode
     }
     
     @IBAction func saveChangesPressed(_ sender: Any) {
@@ -61,12 +84,12 @@ extension PinDetailViewController: UIPickerViewDataSource {
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        var num = 0
-        do {
-            num = try CustomFileManager().listImageFiles().count
-        } catch {
-            display(error: error)
-        }
-        return num
+        return imageNames.count
+    }
+}
+
+extension PinDetailViewController: UIPickerViewDelegate {
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return imageNames[row]
     }
 }
