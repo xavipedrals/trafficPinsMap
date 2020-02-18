@@ -13,6 +13,14 @@
 		8525072123FBCB1200CAFDD8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8525071F23FBCB1200CAFDD8 /* Main.storyboard */; };
 		8525072323FBCB1300CAFDD8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8525072223FBCB1300CAFDD8 /* Assets.xcassets */; };
 		8525072623FBCB1300CAFDD8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8525072423FBCB1300CAFDD8 /* LaunchScreen.storyboard */; };
+		8525072E23FBD71D00CAFDD8 /* MapPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8525072D23FBD71D00CAFDD8 /* MapPin.swift */; };
+		8525073123FBD82700CAFDD8 /* DefaultCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8525073023FBD82700CAFDD8 /* DefaultCache.swift */; };
+		8525073323FBD84700CAFDD8 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8525073223FBD84700CAFDD8 /* Parser.swift */; };
+		8525073523FBD87700CAFDD8 /* RawPinMapCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8525073423FBD87700CAFDD8 /* RawPinMapCache.swift */; };
+		8525073723FBDD5C00CAFDD8 /* PinDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8525073623FBDD5C00CAFDD8 /* PinDetailViewController.swift */; };
+		8525073923FBDEEA00CAFDD8 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8525073823FBDEEA00CAFDD8 /* CustomView.swift */; };
+		8525073B23FBEF5500CAFDD8 /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8525073A23FBEF5500CAFDD8 /* FileManager.swift */; };
+		8525073D23FBFCF900CAFDD8 /* UIViewController+alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8525073C23FBFCF900CAFDD8 /* UIViewController+alerts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +32,14 @@
 		8525072223FBCB1300CAFDD8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8525072523FBCB1300CAFDD8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8525072723FBCB1300CAFDD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8525072D23FBD71D00CAFDD8 /* MapPin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPin.swift; sourceTree = "<group>"; };
+		8525073023FBD82700CAFDD8 /* DefaultCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultCache.swift; sourceTree = "<group>"; };
+		8525073223FBD84700CAFDD8 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		8525073423FBD87700CAFDD8 /* RawPinMapCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RawPinMapCache.swift; sourceTree = "<group>"; };
+		8525073623FBDD5C00CAFDD8 /* PinDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinDetailViewController.swift; sourceTree = "<group>"; };
+		8525073823FBDEEA00CAFDD8 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		8525073A23FBEF5500CAFDD8 /* FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
+		8525073C23FBFCF900CAFDD8 /* UIViewController+alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+alerts.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +72,31 @@
 		8525071823FBCB1200CAFDD8 /* TrafficPins */ = {
 			isa = PBXGroup;
 			children = (
+				8525072F23FBD7F500CAFDD8 /* Utils */,
 				8525071923FBCB1200CAFDD8 /* AppDelegate.swift */,
 				8525071B23FBCB1200CAFDD8 /* SceneDelegate.swift */,
 				8525071D23FBCB1200CAFDD8 /* ViewController.swift */,
+				8525073623FBDD5C00CAFDD8 /* PinDetailViewController.swift */,
+				8525072D23FBD71D00CAFDD8 /* MapPin.swift */,
 				8525071F23FBCB1200CAFDD8 /* Main.storyboard */,
 				8525072223FBCB1300CAFDD8 /* Assets.xcassets */,
 				8525072423FBCB1300CAFDD8 /* LaunchScreen.storyboard */,
 				8525072723FBCB1300CAFDD8 /* Info.plist */,
 			);
 			path = TrafficPins;
+			sourceTree = "<group>";
+		};
+		8525072F23FBD7F500CAFDD8 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				8525073223FBD84700CAFDD8 /* Parser.swift */,
+				8525073823FBDEEA00CAFDD8 /* CustomView.swift */,
+				8525073023FBD82700CAFDD8 /* DefaultCache.swift */,
+				8525073423FBD87700CAFDD8 /* RawPinMapCache.swift */,
+				8525073A23FBEF5500CAFDD8 /* FileManager.swift */,
+				8525073C23FBFCF900CAFDD8 /* UIViewController+alerts.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +170,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8525072E23FBD71D00CAFDD8 /* MapPin.swift in Sources */,
+				8525073723FBDD5C00CAFDD8 /* PinDetailViewController.swift in Sources */,
 				8525071E23FBCB1200CAFDD8 /* ViewController.swift in Sources */,
+				8525073D23FBFCF900CAFDD8 /* UIViewController+alerts.swift in Sources */,
+				8525073923FBDEEA00CAFDD8 /* CustomView.swift in Sources */,
+				8525073323FBD84700CAFDD8 /* Parser.swift in Sources */,
+				8525073B23FBEF5500CAFDD8 /* FileManager.swift in Sources */,
 				8525071A23FBCB1200CAFDD8 /* AppDelegate.swift in Sources */,
+				8525073123FBD82700CAFDD8 /* DefaultCache.swift in Sources */,
+				8525073523FBD87700CAFDD8 /* RawPinMapCache.swift in Sources */,
 				8525071C23FBCB1200CAFDD8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
