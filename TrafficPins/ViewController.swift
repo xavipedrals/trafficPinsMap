@@ -11,7 +11,7 @@ import MapKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var mapView: MKMapView!
+    var mapView: MKMapView!
     
     var annotationPins: [MapPin] {
         return RawPinMapCache().pins.compactMap{ MapPin(rawMapPin: $0) }
@@ -22,6 +22,9 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //NOTE: If MKMapView is added from storyboard app crashes when not debugging
+        mapView = MKMapView(frame: self.view.frame)
+        self.view.addSubview(mapView)
         mapView.addAnnotations(annotationPins)
         mapView.delegate = self
         let gestureRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(ViewController.longpress(gestureRecognizer:)))

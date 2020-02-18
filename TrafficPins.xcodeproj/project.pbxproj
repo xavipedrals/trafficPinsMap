@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		8525071A23FBCB1200CAFDD8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8525071923FBCB1200CAFDD8 /* AppDelegate.swift */; };
-		8525071C23FBCB1200CAFDD8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8525071B23FBCB1200CAFDD8 /* SceneDelegate.swift */; };
 		8525071E23FBCB1200CAFDD8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8525071D23FBCB1200CAFDD8 /* ViewController.swift */; };
 		8525072123FBCB1200CAFDD8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8525071F23FBCB1200CAFDD8 /* Main.storyboard */; };
 		8525072323FBCB1300CAFDD8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8525072223FBCB1300CAFDD8 /* Assets.xcassets */; };
@@ -26,7 +25,6 @@
 /* Begin PBXFileReference section */
 		8525071623FBCB1200CAFDD8 /* TrafficPins.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrafficPins.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8525071923FBCB1200CAFDD8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8525071B23FBCB1200CAFDD8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		8525071D23FBCB1200CAFDD8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8525072023FBCB1200CAFDD8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8525072223FBCB1300CAFDD8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -74,7 +72,6 @@
 			children = (
 				8525072F23FBD7F500CAFDD8 /* Utils */,
 				8525071923FBCB1200CAFDD8 /* AppDelegate.swift */,
-				8525071B23FBCB1200CAFDD8 /* SceneDelegate.swift */,
 				8525071D23FBCB1200CAFDD8 /* ViewController.swift */,
 				8525073623FBDD5C00CAFDD8 /* PinDetailViewController.swift */,
 				8525072D23FBD71D00CAFDD8 /* MapPin.swift */,
@@ -180,7 +177,6 @@
 				8525071A23FBCB1200CAFDD8 /* AppDelegate.swift in Sources */,
 				8525073123FBD82700CAFDD8 /* DefaultCache.swift in Sources */,
 				8525073523FBD87700CAFDD8 /* RawPinMapCache.swift in Sources */,
-				8525071C23FBCB1200CAFDD8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,6 +321,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7FRX8UT8MP;
 				INFOPLIST_FILE = TrafficPins/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -342,6 +339,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7FRX8UT8MP;
 				INFOPLIST_FILE = TrafficPins/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -14,22 +14,10 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="OeT-48-L2f">
-                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
-                            </mapView>
-                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="OeT-48-L2f" secondAttribute="bottom" id="98e-tl-6Rg"/>
-                            <constraint firstItem="OeT-48-L2f" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Exg-Mo-AVp"/>
-                            <constraint firstItem="OeT-48-L2f" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dBB-cc-EMB"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OeT-48-L2f" secondAttribute="trailing" id="jmE-J9-Ewm"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="mapView" destination="OeT-48-L2f" id="6tf-SI-aqz"/>
                         <segue destination="CJM-HO-zcn" kind="show" identifier="goToDetail" id="3l2-Ob-deV"/>
                     </connections>
                 </viewController>
