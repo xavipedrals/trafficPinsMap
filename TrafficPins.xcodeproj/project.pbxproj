@@ -20,6 +20,8 @@
 		8525073923FBDEEA00CAFDD8 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8525073823FBDEEA00CAFDD8 /* CustomView.swift */; };
 		8525073B23FBEF5500CAFDD8 /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8525073A23FBEF5500CAFDD8 /* FileManager.swift */; };
 		8525073D23FBFCF900CAFDD8 /* UIViewController+alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8525073C23FBFCF900CAFDD8 /* UIViewController+alerts.swift */; };
+		85BD0F9C23FD84C600D37681 /* TagButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BD0F9B23FD84C600D37681 /* TagButton.swift */; };
+		85BD0F9E23FD873600D37681 /* PinTags.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BD0F9D23FD873600D37681 /* PinTags.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		8525073823FBDEEA00CAFDD8 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		8525073A23FBEF5500CAFDD8 /* FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
 		8525073C23FBFCF900CAFDD8 /* UIViewController+alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+alerts.swift"; sourceTree = "<group>"; };
+		85BD0F9B23FD84C600D37681 /* TagButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagButton.swift; sourceTree = "<group>"; };
+		85BD0F9D23FD873600D37681 /* PinTags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinTags.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +79,7 @@
 				8525071D23FBCB1200CAFDD8 /* ViewController.swift */,
 				8525073623FBDD5C00CAFDD8 /* PinDetailViewController.swift */,
 				8525072D23FBD71D00CAFDD8 /* MapPin.swift */,
+				85BD0F9D23FD873600D37681 /* PinTags.swift */,
 				8525071F23FBCB1200CAFDD8 /* Main.storyboard */,
 				8525072223FBCB1300CAFDD8 /* Assets.xcassets */,
 				8525072423FBCB1300CAFDD8 /* LaunchScreen.storyboard */,
@@ -92,6 +97,7 @@
 				8525073423FBD87700CAFDD8 /* RawPinMapCache.swift */,
 				8525073A23FBEF5500CAFDD8 /* FileManager.swift */,
 				8525073C23FBFCF900CAFDD8 /* UIViewController+alerts.swift */,
+				85BD0F9B23FD84C600D37681 /* TagButton.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -173,7 +179,9 @@
 				8525073D23FBFCF900CAFDD8 /* UIViewController+alerts.swift in Sources */,
 				8525073923FBDEEA00CAFDD8 /* CustomView.swift in Sources */,
 				8525073323FBD84700CAFDD8 /* Parser.swift in Sources */,
+				85BD0F9E23FD873600D37681 /* PinTags.swift in Sources */,
 				8525073B23FBEF5500CAFDD8 /* FileManager.swift in Sources */,
+				85BD0F9C23FD84C600D37681 /* TagButton.swift in Sources */,
 				8525071A23FBCB1200CAFDD8 /* AppDelegate.swift in Sources */,
 				8525073123FBD82700CAFDD8 /* DefaultCache.swift in Sources */,
 				8525073523FBD87700CAFDD8 /* RawPinMapCache.swift in Sources */,

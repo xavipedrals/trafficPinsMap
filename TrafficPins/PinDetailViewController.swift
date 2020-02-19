@@ -16,10 +16,10 @@ class PinDetailViewController: UIViewController {
 
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var titleTextField: UITextField!
-    @IBOutlet weak var notesTextView: UITextView!
     @IBOutlet weak var pickerView: UIPickerView!
     @IBOutlet weak var changeImageButton: CustomButton!
     @IBOutlet weak var selectedImageLabel: UILabel!
+    @IBOutlet var tagButtons: [TagButton]!
     
     var pin: RawMapPin!
     let cache = RawPinMapCache()
@@ -40,7 +40,21 @@ class PinDetailViewController: UIViewController {
         imageView.image = CustomFileManager().loadImageFromDiskWith(fileName: imageFile)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        for (i, button) in tagButtons.enumerated() {
+            let tag = PinTags(index: i)!
+            button.pinTag = tag
+            button.isMarked = pin.tags?.contains(tag) ?? false
+            button.setup()
+        }
+    }
+    
     //MARK: - Actions
+    
+    @IBAction func tagPressed(_ sender: TagButton) {
+        sender.isMarked.toggle()
+    }
     
     @IBAction func changeImagePressed(_ sender: Any) {
         titleTextField.resignFirstResponder()
@@ -61,6 +75,10 @@ class PinDetailViewController: UIViewController {
     
     @IBAction func saveChangesPressed(_ sender: Any) {
         pin.name = titleTextField.text
+        let tags = tagButtons
+            .filter{ $0.isMarked }
+            .compactMap{ $0.pinTag }
+        pin.tags = tags
         cache.update(pin: pin)
         self.dismiss(animated: true)
     }

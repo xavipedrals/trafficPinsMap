@@ -53,47 +53,48 @@
                                 <rect key="frame" x="20" y="463" width="672" height="38"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="titleEditingEnded:" destination="CJM-HO-zcn" eventType="editingDidEnd" id="Fa8-YE-zbb"/>
+                                </connections>
                             </textField>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="92" translatesAutoresizingMaskIntoConstraints="NO" id="xbF-kY-6rv">
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="KtB-FW-MFY">
                                 <rect key="frame" x="20" y="521" width="672" height="45"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No selected image" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XyS-VN-57G">
-                                        <rect key="frame" x="0.0" y="0.0" width="290" height="45"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ftW-BB-dLq" customClass="CustomButton" customModule="TrafficPins" customModuleProvider="target">
-                                        <rect key="frame" x="522" y="0.0" width="150" height="45"/>
-                                        <color key="backgroundColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="150" id="czE-TF-5Pa"/>
-                                        </constraints>
-                                        <color key="tintColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="Change Image"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="9"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KeF-BM-AXV" customClass="TagButton" customModule="TrafficPins" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="157" height="45"/>
+                                        <state key="normal" title="Button"/>
                                         <connections>
-                                            <action selector="changeImagePressed:" destination="CJM-HO-zcn" eventType="touchUpInside" id="PV5-MG-wWE"/>
+                                            <action selector="tagPressed:" destination="CJM-HO-zcn" eventType="touchUpInside" id="vKN-oQ-Ipa"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xeW-FU-e2b" customClass="TagButton" customModule="TrafficPins" customModuleProvider="target">
+                                        <rect key="frame" x="172" y="0.0" width="156.5" height="45"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="tagPressed:" destination="CJM-HO-zcn" eventType="touchUpInside" id="CcA-hK-qbS"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M6l-Yh-EKV" customClass="TagButton" customModule="TrafficPins" customModuleProvider="target">
+                                        <rect key="frame" x="343.5" y="0.0" width="157" height="45"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="tagPressed:" destination="CJM-HO-zcn" eventType="touchUpInside" id="ROT-x1-9TM"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hS1-fL-liB" customClass="TagButton" customModule="TrafficPins" customModuleProvider="target">
+                                        <rect key="frame" x="515.5" y="0.0" width="156.5" height="45"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="tagPressed:" destination="CJM-HO-zcn" eventType="touchUpInside" id="vFW-NH-MWi"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="P34-BW-Wne"/>
+                                    <constraint firstAttribute="height" constant="45" id="dJC-0o-HTB"/>
                                 </constraints>
                             </stackView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" text="Add notes..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="EIS-Vk-nnB">
-                                <rect key="frame" x="20" y="586" width="672" height="36.5"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="vce-Rx-3B2">
-                                <rect key="frame" x="20" y="652.5" width="672" height="45"/>
+                                <rect key="frame" x="20" y="596" width="672" height="45"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0zS-H4-8YF" customClass="CustomButton" customModule="TrafficPins" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="204" height="45"/>
@@ -152,6 +153,37 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="92" translatesAutoresizingMaskIntoConstraints="NO" id="xbF-kY-6rv">
+                                <rect key="frame" x="20" y="670.5" width="672" height="45"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No selected image" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XyS-VN-57G">
+                                        <rect key="frame" x="0.0" y="0.0" width="290" height="45"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ftW-BB-dLq" customClass="CustomButton" customModule="TrafficPins" customModuleProvider="target">
+                                        <rect key="frame" x="522" y="0.0" width="150" height="45"/>
+                                        <color key="backgroundColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="czE-TF-5Pa"/>
+                                        </constraints>
+                                        <color key="tintColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Change Image"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="9"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="changeImagePressed:" destination="CJM-HO-zcn" eventType="touchUpInside" id="PV5-MG-wWE"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="P34-BW-Wne"/>
+                                </constraints>
+                            </stackView>
                             <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GPi-1H-dxg">
                                 <rect key="frame" x="0.0" y="768" width="712" height="216"/>
                                 <connections>
@@ -163,23 +195,23 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="ZA5-WC-dgQ" firstAttribute="trailing" secondItem="GPi-1H-dxg" secondAttribute="trailing" id="0b2-ew-WnF"/>
-                            <constraint firstItem="xbF-kY-6rv" firstAttribute="top" secondItem="qCA-Et-lcD" secondAttribute="bottom" constant="20" id="2RT-Dv-4v4"/>
                             <constraint firstItem="ZA5-WC-dgQ" firstAttribute="trailing" secondItem="xbF-kY-6rv" secondAttribute="trailing" constant="20" id="5GN-Gp-Qe6"/>
                             <constraint firstItem="ZA5-WC-dgQ" firstAttribute="trailing" secondItem="vce-Rx-3B2" secondAttribute="trailing" constant="20" id="5mj-kg-YL2"/>
                             <constraint firstItem="or1-Fx-rJd" firstAttribute="leading" secondItem="ZA5-WC-dgQ" secondAttribute="leading" id="B5o-jn-YTt"/>
                             <constraint firstItem="qCA-Et-lcD" firstAttribute="leading" secondItem="ZA5-WC-dgQ" secondAttribute="leading" constant="20" id="BQk-Mf-REL"/>
                             <constraint firstItem="ZA5-WC-dgQ" firstAttribute="trailing" secondItem="or1-Fx-rJd" secondAttribute="trailing" id="FAp-WP-ulR"/>
-                            <constraint firstItem="EIS-Vk-nnB" firstAttribute="leading" secondItem="ZA5-WC-dgQ" secondAttribute="leading" constant="20" id="O8h-GB-H7x"/>
-                            <constraint firstItem="ZA5-WC-dgQ" firstAttribute="trailing" secondItem="EIS-Vk-nnB" secondAttribute="trailing" constant="20" id="OcF-BJ-GjP"/>
                             <constraint firstItem="xbF-kY-6rv" firstAttribute="leading" secondItem="ZA5-WC-dgQ" secondAttribute="leading" constant="20" id="RdX-bA-5LW"/>
+                            <constraint firstItem="KtB-FW-MFY" firstAttribute="top" secondItem="qCA-Et-lcD" secondAttribute="bottom" constant="20" id="T9N-x3-uEj"/>
                             <constraint firstItem="or1-Fx-rJd" firstAttribute="top" secondItem="ZA5-WC-dgQ" secondAttribute="top" id="a3x-4y-4XZ"/>
                             <constraint firstItem="qCA-Et-lcD" firstAttribute="top" secondItem="or1-Fx-rJd" secondAttribute="bottom" constant="20" id="bi8-3e-e9C"/>
-                            <constraint firstItem="EIS-Vk-nnB" firstAttribute="top" secondItem="xbF-kY-6rv" secondAttribute="bottom" constant="20" id="gqA-Rm-dPo"/>
-                            <constraint firstItem="vce-Rx-3B2" firstAttribute="top" secondItem="EIS-Vk-nnB" secondAttribute="bottom" constant="30" id="jtq-8z-4Qw"/>
                             <constraint firstItem="or1-Fx-rJd" firstAttribute="height" secondItem="hwL-OG-c5K" secondAttribute="height" multiplier="0.45" id="lEH-bW-VW4"/>
                             <constraint firstItem="GPi-1H-dxg" firstAttribute="leading" secondItem="ZA5-WC-dgQ" secondAttribute="leading" id="p4j-Se-Sxo"/>
+                            <constraint firstItem="xbF-kY-6rv" firstAttribute="top" secondItem="vce-Rx-3B2" secondAttribute="bottom" constant="29.5" id="pf6-Qb-tSJ"/>
+                            <constraint firstItem="vce-Rx-3B2" firstAttribute="top" secondItem="KtB-FW-MFY" secondAttribute="bottom" constant="30" id="rTJ-f9-f9d"/>
                             <constraint firstItem="ZA5-WC-dgQ" firstAttribute="bottom" secondItem="GPi-1H-dxg" secondAttribute="bottom" id="sLa-SG-nYv"/>
                             <constraint firstItem="vce-Rx-3B2" firstAttribute="leading" secondItem="ZA5-WC-dgQ" secondAttribute="leading" constant="20" id="t7D-NN-1uQ"/>
+                            <constraint firstItem="ZA5-WC-dgQ" firstAttribute="trailing" secondItem="KtB-FW-MFY" secondAttribute="trailing" constant="20" id="yIH-nn-zh7"/>
+                            <constraint firstItem="KtB-FW-MFY" firstAttribute="leading" secondItem="ZA5-WC-dgQ" secondAttribute="leading" constant="20" id="ynU-Dd-G2m"/>
                             <constraint firstItem="ZA5-WC-dgQ" firstAttribute="trailing" secondItem="qCA-Et-lcD" secondAttribute="trailing" constant="20" id="zUg-0G-XLd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ZA5-WC-dgQ"/>
@@ -188,10 +220,13 @@
                     <connections>
                         <outlet property="changeImageButton" destination="ftW-BB-dLq" id="jlp-9U-v0v"/>
                         <outlet property="imageView" destination="YQn-eQ-zxL" id="2BT-dn-QUV"/>
-                        <outlet property="notesTextView" destination="EIS-Vk-nnB" id="rY5-aa-F1d"/>
                         <outlet property="pickerView" destination="GPi-1H-dxg" id="raA-HH-x79"/>
                         <outlet property="selectedImageLabel" destination="XyS-VN-57G" id="sdC-4l-poh"/>
                         <outlet property="titleTextField" destination="qCA-Et-lcD" id="Tng-4u-ZSc"/>
+                        <outletCollection property="tagButtons" destination="KeF-BM-AXV" collectionClass="NSMutableArray" id="rWd-oQ-6wP"/>
+                        <outletCollection property="tagButtons" destination="xeW-FU-e2b" collectionClass="NSMutableArray" id="gGW-Bd-4Ee"/>
+                        <outletCollection property="tagButtons" destination="M6l-Yh-EKV" collectionClass="NSMutableArray" id="EMM-Es-4gN"/>
+                        <outletCollection property="tagButtons" destination="hS1-fL-liB" collectionClass="NSMutableArray" id="fJZ-pO-TAq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rfm-2W-FRm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
