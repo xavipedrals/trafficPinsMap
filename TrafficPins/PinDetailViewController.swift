@@ -16,10 +16,8 @@ class PinDetailViewController: UIViewController {
 
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var titleTextField: UITextField!
-    @IBOutlet weak var pickerView: UIPickerView!
-    @IBOutlet weak var changeImageButton: CustomButton!
-    @IBOutlet weak var selectedImageLabel: UILabel!
     @IBOutlet var tagButtons: [TagButton]!
+    @IBOutlet weak var idLabel: UILabel!
     
     var pin: RawMapPin!
     let cache = RawPinMapCache()
@@ -35,9 +33,8 @@ class PinDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         titleTextField.text = pin.name ?? ""
-        selectedImageLabel.text = pin.imageFileName ?? "No selected image"
-        guard let imageFile = pin.imageFileName else { return }
-        imageView.image = CustomFileManager().loadImageFromDiskWith(fileName: imageFile)
+        idLabel.text = "ID: \(pin.id)"
+        imageView.image = CustomFileManager().loadImageFromDiskWith(fileName: pin.imageFileName)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -54,23 +51,6 @@ class PinDetailViewController: UIViewController {
     
     @IBAction func tagPressed(_ sender: TagButton) {
         sender.isMarked.toggle()
-    }
-    
-    @IBAction func changeImagePressed(_ sender: Any) {
-        titleTextField.resignFirstResponder()
-        if isChangeImageMode {
-            pickerView.isHidden = true
-            changeImageButton.setTitle("Change image", for: .normal)
-            let selectedImageIndex = pickerView.selectedRow(inComponent: 0)
-            let fileName = imageNames[selectedImageIndex]
-            selectedImageLabel.text = fileName
-            imageView.image = CustomFileManager().loadImageFromDiskWith(fileName: fileName)
-            pin.imageFileName = fileName
-        } else {
-            pickerView.isHidden = false
-            changeImageButton.setTitle("Save image", for: .normal)
-        }
-        isChangeImageMode = !isChangeImageMode
     }
     
     @IBAction func saveChangesPressed(_ sender: Any) {
@@ -93,21 +73,5 @@ class PinDetailViewController: UIViewController {
             self.delegate?.pinDeleted()
             self.dismiss(animated: true)
         }
-    }
-}
-
-extension PinDetailViewController: UIPickerViewDataSource {
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return imageNames.count
-    }
-}
-
-extension PinDetailViewController: UIPickerViewDelegate {
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return imageNames[row]
     }
 }
